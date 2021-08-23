@@ -1,4 +1,4 @@
-const LiveVideo = require('../models/liveVideo.model');
+const LiveVideo = require('../models/admin.model');
 const repository = require('../repository/repository')
 
 const createVideo = async (req, res) => {
