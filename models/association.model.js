@@ -18,7 +18,6 @@ const AssociationSchema = mongoose.Schema({
     domain: {
         type: String,
         require: true
-
     },
     description: {
         type: String,
