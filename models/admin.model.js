@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 const AdminSchema = mongoose.Schema({
     name: {
         type: String,
-        require: true
+        required: true
 
     },
     password: {
         type: String,
         length: 8,
-        require: true
+        required: true
     },
     email: {
         type: String,
