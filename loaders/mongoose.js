@@ -9,7 +9,7 @@ const connectionParams = {
     useUnifiedTopology: true
 }
 const connectDB = () => {
-    mongoose.connect("mongodb://leaderDeveloper:leader2020@cluster0-shard-00-00.iutps.mongodb.net:27017,cluster0-shard-00-01.iutps.mongodb.net:27017,cluster0-shard-00-02.iutps.mongodb.net:27017/WheelOfFortuneDB?ssl=true&replicaSet=atlas-14f3hd-shard-0&authSource=admin&retryWrites=true&w=majority", connectionParams)
+    mongoose.connect("mongodb+srv://wheeloffortunerpojectp:wheeloffortunerpojectp@cluster0.dcp0e.mongodb.net/wheeloffortunerpoject?retryWrites=true&w=majority", connectionParams)
         .then(() => {
             console.log('MongoDB Connection Succeeded.');
         })

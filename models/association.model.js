@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const AssociationSchema = mongoose.Schema({
-    name: {
+    nameAssociation: {
         type: String,
         required: true
 
