@@ -1,18 +1,9 @@
 const mongoose = require('mongoose');
 
 const AssociationSchema = mongoose.Schema({
-    name: {
+    nameAssociation: {
         type: String,
         require: true
-
-    },
-    password: {
-        type: String,
-        length: 8,
-        require: true
-    },
-    email: {
-        type: String,
 
     },
 
