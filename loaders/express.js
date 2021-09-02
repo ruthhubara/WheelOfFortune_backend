@@ -9,12 +9,12 @@ const cors = require("cors");
 //socketServer(http);
 const app = express();
 // setSocket();
-
+const dotenv = require('dotenv')
 
 
 class ExpressLoader {
     constructor() {
-
+        dotenv.config()
         app.use(cookieParser());
         app.use(express.static('public'));
         app.use(cors());
@@ -22,7 +22,7 @@ class ExpressLoader {
         app.use(express.static(path.join(__dirname, './build')));
         app.use(bodyParser.json());
         app.use('/api', apiRouter)
-        app.use('/*', viewsRouter)
+        // app.use('/*', viewsRouter)
         let senderStream;
         this.server = app.listen(3033, () => {
             console.log(`Express running, now listening on port 3033`);

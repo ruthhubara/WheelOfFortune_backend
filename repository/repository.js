@@ -6,9 +6,11 @@ saveObject = (doc) => {
     return new Promise(async (resolve, reject) => {
         try {
             const savedDoc = await doc.save()
+            console.log("save");
             resolve(savedDoc)
         }
         catch (err) {
+            console.log("bbbbbbbbbb");
             reject(err)
         }
     })
@@ -39,6 +41,7 @@ findObject = (Model, filter, populationArr = null) => {
 createObject = (Model, data) => {
     return new Promise(async (resolve, reject) => {
         // const savedDoc = await doc.save()
+        console.log(Model);
         Model.create(data, function (err, savedDoc) {
             if (err) return reject(err);
             resolve(savedDoc);
@@ -62,8 +65,9 @@ findObjectAndUpdate = (Model, filterArr) => {
 findObjectByIdAndUpdate = (Model, id, optionsArr) => {
     return new Promise(async (resolve, reject) => {
         try {
-
+            console.log(Model, id, optionsArr);
             const doc = await Model.findByIdAndUpdate(id, ...optionsArr)
+            console.log(doc);
             resolve(doc)
         } catch (err) {
             reject(err)
